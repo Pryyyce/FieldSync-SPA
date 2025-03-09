@@ -1,4 +1,4 @@
-import { User } from '../context/UsersContext';
+import User from "../Interfaces";
 
 
 export const saveUser = async (url:string, user: User) => {

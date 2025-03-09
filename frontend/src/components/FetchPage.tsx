@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import UserDisplay from "./UserDisplay";
-import { useUsersContext, UsersContext, User } from "../context/UsersContext";
+import { useUsersContext, UsersContext } from "../context/UsersContext";
+import User from "../Interfaces";
 import FetchButton from "./FetchButton";
-export default function FetchPage() {
-    const [users, setUsers] = useState<User[]>([]);
 
+export default function FetchPage() {
+    const baseApi = process.env.BACKEND_APP_API_URL || "http://localhost:3001/";
+    const [users, setUsers] = useState<User[]>([]);
     async function fetchUsers(url: string) {
         try {
             const response = await fetch(url);
@@ -19,7 +21,7 @@ export default function FetchPage() {
     return (
         <>
             <h1>FetchPage</h1>
-            <FetchButton buttonName="get Users from backend!"tryFetch={fetchUsers} url="users/saved/"/>
+            <FetchButton buttonName="get Users from backend!"tryFetch={fetchUsers} url={`${baseApi}users/saved/`}/>
             <UserDisplay users={users}/>
         </>
     );

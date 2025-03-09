@@ -1,6 +1,6 @@
 import React from "react";
 import UserInfoCard from "./UserInfoCard";
-import { User } from "../context/UsersContext";
+import User from "../Interfaces";
 
 interface UserDisplayProps {
     users: User[];

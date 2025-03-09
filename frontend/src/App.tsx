@@ -7,7 +7,8 @@ import FetchPage from './components/FetchPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import NavBarLinks from './data/NavbarLinks';
-import {UsersContext,User} from './context/UsersContext';
+import {UsersContext} from './context/UsersContext';
+import User from './Interfaces';
 import UsersContextWrapper from './context/UsersContextWrapper';
 function App() {
 

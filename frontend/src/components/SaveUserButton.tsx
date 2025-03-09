@@ -1,4 +1,4 @@
-import {User} from "../context/UsersContext";
+import User from "../Interfaces";
 import FetchButton from "./FetchButton";
 import {saveUser} from "../functions/saveUser";
 export default function SaveUserButton(props: {user: User; url: string;}) {

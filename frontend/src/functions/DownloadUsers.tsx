@@ -1,5 +1,6 @@
 import getUsers from "./getUsers";
-import { useUsersContext,User } from "../context/UsersContext";
+import { useUsersContext} from "../context/UsersContext";
+import User from "../Interfaces";
 
 export const DownloadUsers = async (url: string) => {
    

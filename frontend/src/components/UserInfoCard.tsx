@@ -1,8 +1,8 @@
 import React from "react";
-import { User } from "../context/UsersContext";
+import User from "../Interfaces";
 type UserProps = {user: User;};
 
-const UserInfoCard: React.FC<UserProps> = (props) => {
+const UserInfoCard: React.FC<UserProps> = React.memo((props) => {
     const user = props.user;
     return (
 
@@ -13,6 +13,6 @@ const UserInfoCard: React.FC<UserProps> = (props) => {
                 <p>Phone: {user.phone}</p>
             </div>
     );
-}
+});
 
 export default UserInfoCard;
