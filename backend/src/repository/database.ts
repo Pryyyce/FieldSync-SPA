@@ -1,11 +1,10 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
-import UserDataSource from './entities/UserDataSource';
+import UserDataSource from '../entities/UserDataSource';
 dotenv.config();
 
-
-const connectDB = async (retries = 5,delay = 2000) => {
-    
+//tries to connect postgres through typeorm
+const connectDB = async (retries = 5,delay = 5000) => {
     while(retries){
         try {
             await UserDataSource.initialize();

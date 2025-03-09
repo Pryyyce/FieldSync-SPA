@@ -1,5 +1,5 @@
 # FieldSync-SPA
-This is my submission for the SPA assignment for the Fullstack coding test
+This is my submission for the Fullstack coding test
 
 # Run Instructions
 
@@ -9,7 +9,7 @@ Clone the repository:
     git clone https://github.com/yourusername/FieldSync-SPA.git
 ```
 
-# if running frontEnd locally
+# Running the Frontend
 
 make sure you have node installed with 
 
@@ -20,7 +20,7 @@ make sure you have node installed with
 you may have to run 
 
 ```bash
-    npm install -g npm@11.2.0
+    npm install -g npm@22.14.0
 ```
 
 if you don't have the latest version installed

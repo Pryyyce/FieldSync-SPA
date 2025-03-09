@@ -1,9 +1,8 @@
-import {inject,injectable} from 'inversify';
 
-import {Request} from 'express';
 import UserRepository from '../repository/UserRepository';
-import {UserEntity} from '../entities/UserEntity';
 
+//service layer doesn't do much in this example, helps with scalability because logic for future api calls can be 
+//handled by subbing out different services
  class UserService {
 
     private userRepository: UserRepository;
@@ -12,10 +11,9 @@ import {UserEntity} from '../entities/UserEntity';
     }
 
     async createUser(req: any): Promise<any> {
-        console.log('Creating userAGAIN:', req.body);
         return this.userRepository.createUser(req);
     }
-    async getUsers(): Promise<UserEntity []| null> {
+    async getUsers(): Promise<any> {
         return this.userRepository.getUsers();}}
 
 export default UserService;

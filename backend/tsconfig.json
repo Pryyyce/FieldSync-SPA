@@ -10,7 +10,7 @@
     "rootDir": "./src",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false, // Prevents issues with uninitialized properties
+    "strictPropertyInitialization": false, 
     "esModuleInterop": true
   },
   "include": ["src/**/*.ts"],

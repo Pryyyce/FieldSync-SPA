@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from "react";
-import  User  from "../Interfaces";
-import { Interface } from "readline";
+import  User  from "../data/Interfaces";
+
 export interface UsersContextType {
     users: User[];
     setUsers: (users: User[]) => void;

@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import NavBar from './components/Navbar';
-import HomePage from './components/HomePage';
-import SavePage from './components/SavePage';
-import FetchPage from './components/FetchPage';
+import HomePage from './pages/HomePage';
+import SavePage from './pages/SavePage';
+import FetchPage from './pages/FetchPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import NavBarLinks from './data/NavbarLinks';
 import {UsersContext} from './context/UsersContext';
-import User from './Interfaces';
+import User from './data/Interfaces';
 import UsersContextWrapper from './context/UsersContextWrapper';
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
   return (
     
     <Router>
-      <NavBar links = {NavBarLinks}/>
+      
       <Routes>
 
         <Route element ={<UsersContextWrapper/>}>
@@ -27,6 +27,7 @@ function App() {
         <Route path="/users/load" element={<FetchPage/>} />
 
       </Routes>
+      <NavBar links = {NavBarLinks}/>
     </Router>
   );
 }

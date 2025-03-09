@@ -1,4 +1,4 @@
-import User from "../Interfaces";
+import User from "../data/Interfaces";
 
 
 export const saveUser = async (url:string, user: User) => {

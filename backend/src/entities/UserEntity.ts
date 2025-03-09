@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 import UserInterface from '../interfaces';
 import { Address, Geo, Company } from './EmbeddableEntities';
 
-
+//the main object stored in the database, id is primary key
 @Entity("usersDatabase")
 export class UserEntity implements UserInterface {
     @PrimaryGeneratedColumn()

@@ -1,3 +1,4 @@
+//needed for the orm to extend into enteties
 export interface Address {
     street: string;
     suite: string;

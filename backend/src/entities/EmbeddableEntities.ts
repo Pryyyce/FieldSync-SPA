@@ -3,6 +3,7 @@ import { Address as AddressInterface,
     Company as CompanyInterface,
     Geo as GeoInterface } from '../interfaces';
 
+// Entities without primary keys to be embedded in other entities
 export class Address implements AddressInterface {
     @Column({ nullable: true })
     street: string=Address.prototype.street;

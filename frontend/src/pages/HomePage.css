@@ -1,0 +1,40 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 50 auto;
+    padding: 40px 20px;
+    padding-top: 20px; 
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px); 
+}
+
+.page-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #e0e0ff; 
+    margin-bottom: 30px;
+}
+
+.home-page .download-button-container {
+    margin-top: 20px;
+}
+
+.home-page .user-display-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.home-page .message {
+    color: #a288f2; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}

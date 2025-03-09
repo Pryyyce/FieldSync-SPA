@@ -1,7 +1,7 @@
 import FetchButton from "./FetchButton";
 import { useUsersContext } from "../context/UsersContext";
 import getUsers from "../functions/getUsers";
-import User from "../Interfaces";
+
 
 const DownloadButton: React.FC = () => {
     const { setUsers } = useUsersContext();

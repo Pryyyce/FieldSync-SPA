@@ -3,15 +3,15 @@ import { get } from 'http';
 import {UserEntity} from '../entities/UserEntity';
 import { Repository } from 'typeorm';
 import UserDataSource from '../entities/UserDataSource';
-import { Request,response,Response } from 'express';
+
+
+
 class UserRepository {
     
     private userDataBase: Repository<UserEntity>;
     constructor(){
         this.userDataBase = UserDataSource.getRepository(UserEntity);
     }
-
-   
 
     async createUser(user: any): Promise<any> {
         try {
@@ -20,17 +20,17 @@ class UserRepository {
             return res;
         } catch (error) {
             console.error('Error executing query:', error);
-            throw error;
+            return error;
         }
     }
 
-    async getUsers(): Promise<UserEntity[]> {
+    async getUsers(): Promise<any> {
         try {
             const users = await this.userDataBase.find();
             return users;
         } catch (error) {
             console.error('Error executing query:', error);
-            throw error;
+            return error;
         }
     }
 }
