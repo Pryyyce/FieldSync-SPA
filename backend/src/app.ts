@@ -14,7 +14,7 @@ app.use(cors({
     optionsSuccessStatus: 200
 }));
 app.use(json());
-
+//start up repository layer
 connectDB();
 
 //service controller repository paradigm, top level only talks to controller
