@@ -1,6 +1,4 @@
 import { data } from "react-router-dom";
-
-
 const getUsers = async (
     url: string,
     setData: (data: any) => void,

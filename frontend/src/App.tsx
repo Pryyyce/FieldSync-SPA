@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import NavBar from './components/Navbar';
 import HomePage from './components/HomePage';
 import SavePage from './components/SavePage';
+import FetchPage from './components/FetchPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import NavBarLinks from './data/NavbarLinks';
@@ -22,7 +23,7 @@ function App() {
           <Route path="/users/save" element={<SavePage/>} />
         </Route>
 
-        <Route path="/users/load" element={<div>Load</div>} />
+        <Route path="/users/load" element={<FetchPage/>} />
 
       </Routes>
     </Router>

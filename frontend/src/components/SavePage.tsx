@@ -6,7 +6,6 @@ const SavePage: React.FC = () => {
         <>
         
             <h1>SavePage</h1>
-           
             <SaveUserDisplay />
         </>
     );
