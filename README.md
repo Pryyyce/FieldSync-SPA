@@ -9,6 +9,10 @@ Clone the repository:
     git clone https://github.com/yourusername/FieldSync-SPA.git
 ```
 
+```bash
+    cd FieldSync-SPA
+```
+
 # installing/updating NPM
 
 make sure you have node installed with 
@@ -42,18 +46,25 @@ if you don't have node installed, you can either install it at https://nodejs.or
 # building frontend
 
 # first
+
+```bash
+    cd frontend
+```
+
+you need to install node modules, you can do this with
+```bash 
+    npm install 
+```
+
+it's going to yell at you, this is parially because create react app loves depreciated stuff
+
 you need to install yarn, you can do with 
 
-```bash 
-    npm install -g yarn
-```
 on both windows and linux
 
 # run yarn build in the frontend directory
     ```bash
-    cd frontend
-    yarn build
-    yarn run
+    yarn start
     ```
 you should be good to go now for the frontend!
 
@@ -140,6 +151,8 @@ Because of this, It's pretty heavily organized, and I hope that I've made the fo
 As the app grows, the amount of new files per component will slow drastically as a lot of the pieces can be reused, (like fetchbutton being used to implement downloadbutton). I would say this is scalable.
 
 one thing I would probably change in a larger app for frontEnd is styling. A lot of the styling is written directly in classes and used right now because I was playing with it a bit. I would probably switch to tailwind or a more hands-off styling library because styling started to get annoying.
+
+another thing I would absolutely change is the build strategy. I figured that createReactApp would work well because it used to be very supported, But instead it became a versioning headache. This is less of an issue on something like linux or mac where it's easier to mess with your node version a lot, but in a bigger project I would probably use something really simple like vite or a really flushed out framework like nextJS
 
 # backend, controller service repository
 
